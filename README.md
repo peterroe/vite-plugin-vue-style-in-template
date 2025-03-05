@@ -1,6 +1,6 @@
 ## Vite Plugin Vue Style In Template
 
-Extract the style tags from the Vue component into separate files.
+Extract the style tags from the Vue component into basic style tags.
 
 ## Usage
 
