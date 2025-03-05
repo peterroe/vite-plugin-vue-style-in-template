@@ -32,6 +32,10 @@ export default defineConfig({
 
 ## Example
 
+`<style>` tags within the template will be extracted into corresponding `<style>` tags based on whether they contain the `scoped` attribute. If the original file does not have `<style>` tags, new `<style>` tags will be inserted.
+
+### Basic Usage
+
 transform:
 
 ```vue
@@ -87,4 +91,49 @@ to:
 </style>
 ```
 
-`<style>` tags within the template will be extracted into corresponding `<style>` tags based on whether they contain the `scoped` attribute. If the original file does not have `<style>` tags, new `<style>` tags will be inserted.
+### With `slot`
+
+You can use `<style>` tags within the `<slot>` tags to style the content of the slot.
+
+`comp.vue`:
+
+```vue
+<template>
+  <div>
+    <div>
+      <slot name="header" />
+    </div>
+    <div>
+      <slot name="content" />
+    </div>
+  </div>
+</template>
+```
+
+`app.vue`:
+
+```vue
+<script setup lang="ts">
+import Comp from './comp.vue'
+</script>
+<template>
+  <Comp>
+    <template #header>
+      <div class="header">Header</div>
+      <style scoped>
+        .header {
+          color: red;
+        }
+      </style>
+    </template>
+    <template #content>
+      <div class="content">Content</div>
+      <style scoped>
+        .content {
+          color: blue;
+        }
+      </style>
+    </template>
+  </Comp>
+</template>
+```
