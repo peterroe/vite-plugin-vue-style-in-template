@@ -16,6 +16,20 @@ export default defineConfig({
 })
 ```
 
+In [vitepress](https://vitepress.dev/)
+
+```ts
+import vueStyleInTemplate from 'vite-plugin-vue-style-in-template'
+
+export default defineConfig({
+  plugins: [
+    vueStyleInTemplate({
+      include: [/\.vue/, /\.md/],
+    }),
+  ],
+})
+```
+
 ## Example
 
 transform:
