@@ -38,7 +38,7 @@ transform:
 <template>
   <div>
     <h1 class="main-title">Hello World</h1>
-    <style>
+    <style scoped>
       .main-title {
         color: red;
       }
