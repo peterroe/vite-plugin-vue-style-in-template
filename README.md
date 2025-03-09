@@ -24,7 +24,7 @@ import vueStyleInTemplate from 'vite-plugin-vue-style-in-template'
 export default defineConfig({
   plugins: [
     vueStyleInTemplate({
-      include: [/\.vue/, /\.md/],
+      include: [/\.vue$/, /\.md$/],
     }),
   ],
 })
