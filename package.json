@@ -49,7 +49,7 @@
     "consola": "^3.2.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "4.4.0",
+    "@antfu/eslint-config": "4.11.0",
     "@types/node": "^18.18.9",
     "bumpp": "8.2.1",
     "eslint": "9.21.0",
